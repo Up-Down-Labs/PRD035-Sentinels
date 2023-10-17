@@ -4,9 +4,9 @@
 } */
 
 body {
-  color: #000000;
+  color: black;
   font-family: sans-serif;
-
+  border-top: 10px solid;
   /* background-image: url("bg-image.png"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,19 +25,29 @@ div {
   margin: 0 auto;
   padding: 10px 20px;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 header {
-  background-color: #525457;
-  color: #2c0d0d;
+  background-color: #093869;
+  color: #ffffff;
   padding: 20px 0;
   text-align: center;
 }
 
-.logo {
-  width: 107.5px;
-  height: 60.5px;
+/* .logo1 {
+  width: auto;
+  height: 50px;
   margin-right: 10px;
+  float: left !important;
+} */
+.logo2 {
+  width: auto;
+  height: 60px;
+  margin-right: 10px;
+  float: right !important;
 }
 
 h1 {
@@ -47,12 +57,12 @@ h1 {
 }
 
 .container {
-  width: 650px;
-  margin-left: 30px;
+  width: 1000px;
+  margin: auto;
 }
 
 .fieldset1 {
-  background: rgba(75, 97, 138, 0.295);
+  background: whitesmoke;
   margin: 20px;
   height: auto;
   width: auto;
@@ -63,7 +73,7 @@ h1 {
   font-size: 26px;
   text-transform: uppercase;
   text-align: center;
-  background-color: beige;
+  background-color: whitesmoke;
 }
 
 .input {
@@ -100,10 +110,6 @@ select {
   font-size: 16px;
 }
 
-input[type="radio"] {
-  cursor: pointer;
-}
-
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="tel"]:hover,
@@ -116,46 +122,23 @@ textarea:hover {
 }
 
 .fieldset2 {
-  background: rgba(75, 97, 138, 0.295);
+  background: whitesmoke;
   margin: 20px;
   height: auto;
   width: auto;
 }
+
 h2,
 h3,
 h4,
 h5,
-h6,
-h7 {
-  padding-left: 20px;
+h6 {
+  padding-left: 10px;
 }
-
-.slider-container {
-  text-align: left;
-}
-
-.slider {
-  width: 50%;
-  height: 10px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  box-shadow: 0 2px 4px #0000001a;
-  cursor: pointer;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-#slider1Value,
-#slider2Value,
-#slider3Value {
-  font-size: 24px;
-  font-weight: bold;
-  color: #444;
+.rating {
+  margin-top: 40px;
+  border: none;
+  float: left;
 }
 
 .question-header {
@@ -187,7 +170,6 @@ h7 {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  margin-left: 25px;
 }
 
 .submit:hover {
