@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="form.css" rel="stylesheet" />
+    
+    <title>Feedback-Form on Indian Railways</title>
+  </head>
+  <body background="images/railway 2.jpg">
+    <div class="container">
+        <header class="header">
+          <div class="head-container">
+          <!-- <img src="images/Railway logo.jpg" alt="logo" /> -->
+          <h1>INDIAN RAILWAYS</h1>
+          </div>
+        </header>
+      
+
+      <div>
+        <form action="process-form.php" method="post" >
+          <fieldset class="fieldset1">
+            <legend class="info">INFORMATION</legend>
+            <div class="input">
+              <div>
+                <label for="fname">Name :</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your Name" />
+              </div>
+
+              <div>
+                <label for="email">E-mail :</label>
+
+                <input
+                  type="email"
+                  name="email"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  placeholder="Enter your E-mail"
+                  id="email"
+                />
+              </div>
+
+              <div>
+                <label for="mobile">Mobile No. :</label>
+
+                <input
+                  type="tel"
+                  name="mobile"
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  placeholder="Enter Your Mobile No."
+                  id="mobile"
+                />
+              </div>
+
+              <div>
+                <label for="pnr_no">Enter your PNR No. :</label>
+
+                <input
+                  type="text"
+                  name="pnr_no"
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  placeholder="Enter your PNR No."
+                  id="pnr_no"
+                />
+              </div>
+
+              <div>
+                <select name="classes">
+                  <option value="All Classes" selected>All classes</option>
+                  <option value="Anubhuthi Class (EA)">
+                    Anubhuthi Class (EA)
+                  </option>
+                  <option value="AC First Class (1A)">
+                    AC First Class (1A)
+                  </option>
+                  <option value="Vistadome AC (EV)">Vistadome AC (EV)</option>
+                  <option
+                    value="
+        Exec. Chair Car (EC)"
+                  >
+                    Exec. Chair Car (EC)
+                  </option>
+                  <option
+                    value="
+        AC 2 Tier (2A)"
+                  >
+                    AC 2 Tier (2A)
+                  </option>
+                  <option
+                    value="
+        First Class (FC)"
+                  >
+                    First Class (FC)
+                  </option>
+                  <option value="AC 3 Tier (3A)">AC 3 Tier (3A)</option>
+                  <option value="AC 3 Economy (3E)">AC 3 Economy (3E)</option>
+                  <option value="Vistadome Chair Car (VC)">
+                    Vistadome Chair Car (VC)
+                  </option>
+                  <option value="AC Chair Car (CC)">AC Chair Car (CC)</option>
+                  <option value="Sleeper (SL)">Sleeper (SL)</option>
+                  <option value="Vistadome Non AC (VS)">
+                    Vistadome Non AC (VS)
+                  </option>
+                  <option value="Second Sitting (2S)">
+                    Second Sitting (2S)
+                  </option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <br /><br />
+
+          <fieldset class="fieldset2">
+           <div>
+              <legend class="info">Your Journey Experience:</legend>
+
+              <div class="question-container">
+                <h2 class="main-question">1. Overall Experience:</h2>
+
+                <!-- <div class="slider-container">
+                  <label class="question" for="slider1"
+                    >a.Rate your journey:</label
+                  >
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    id="slider1"
+                  />
+                  <span id="slider1Value">5</span>
+                 > 
+                </div> -->
+
+                <div>
+                  <label class="question" for="enjoyment"
+                    >a.What did you enjoy the most about your journey?</label
+                  ><br />
+                  <textarea
+                    id="enjoyment"
+                    name="enjoyment"
+                    rows="4"
+                    cols="50"
+                  ></textarea
+                  ><br /><br />
+                </div>
+              </div>
+
+              <div class="question-container">
+                <p class="main-question">2. Booking Process:</p>
+                <div>
+                  <label class="question" for="bookingEase"
+                    >a.How easy was it to book tickets?</label
+                  ><br />
+
+                  <input
+                    type="radio"
+                    id="veryEasy"
+                    name="bookingEase"
+                    value="Very Easy"
+                  />
+                  <label for="veryEasy">Very Easy</label><br />
+
+                  <input
+                    type="radio"
+                    id="easy"
+                    name="bookingEase"
+                    value="Easy"
+                  />
+                  <label for="easy">Easy</label><br />
+
+                  <input
+                    type="radio"
+                    id="neutral"
+                    name="bookingEase"
+                    value="Neutral"
+                  />
+                  <label for="neutral">Neutral</label><br />
+
+                  <input
+                    type="radio"
+                    id="difficult"
+                    name="bookingEase"
+                    value="Difficult"
+                  />
+                  <label for="difficult">Difficult</label><br />
+
+                  <input
+                    type="radio"
+                    id="veryDifficult"
+                    name="bookingEase"
+                    value="Very Difficult"
+                  />
+                  <label for="veryDifficult">Very Difficult</label><br /><br />
+                </div>
+
+                <div>
+                  <label class="question" for="bookingprob"
+                    >b.Describe any problems faced during booking?</label
+                  ><br />
+                  <textarea
+                    id="bookingprob"
+                    name="bookingprob"
+                    rows="4"
+                    cols="50"
+                  ></textarea
+                  ><br /><br />
+                </div>
+              </div>
+              <div class="question-container">
+                <p class="main-question">3. Train Facilities:</p>
+
+                <!-- <div class="slider-container">
+                  <label class="question" for="slider2"
+                    >a.Rate the cleanliness and comfort of the train:</label
+                  >
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    id="slider2"
+                  />
+                  <span id="slider2Value">5</span>
+                </div>
+              </div> -->
+
+              <div>
+                <label class="question" for="restroom"
+                  >b.How was the cleanliness and availability of
+                  restrooms?</label
+                ><br />
+
+                <input
+                  type="radio"
+                  id="excellent"
+                  name="restroom"
+                  value="Excellent"
+                />
+                <label for="excellent">Excellent</label><br />
+
+                <input type="radio" id="good" name="restroom" value="Good" />
+                <label for="good">Good</label><br />
+
+                <input
+                  type="radio"
+                  id="average"
+                  name="restroom"
+                  value="Average"
+                />
+                <label for="average">Average</label><br />
+
+                <input type="radio" id="poor" name="restroom" value="Poor" />
+                <label for="poor">Poor</label><br />
+              </div>
+            </div>
+
+            <div class="question-container">
+              <p class="main-question">4. Punctuality and Timeliness:</p>
+
+              <div>
+                <label class="question" for="punctuality"
+                  >a.How punctual was your train?</label
+                ><br />
+
+                <input
+                  type="radio"
+                  id="ontime"
+                  name="punctuality"
+                  value="On Time"
+                />
+                <label for="ontime">On Time</label><br />
+
+                <input
+                  type="radio"
+                  id="slightlydelayed"
+                  name="punctuality"
+                  value="Slightly Delayed"
+                />
+                <label for="slightlydelayed">Slightly Delayed</label><br />
+
+                <input
+                  type="radio"
+                  id="significantlydelayed"
+                  name="punctuality"
+                  value="Significantly Delayed"
+                />
+                <label for="significantlydelayed">Significantly Delayed</label
+                ><br />
+              </div>
+
+              <div>
+                <label class="question" for="communication"
+                  >b.Were you informed about delays in a timely manner?</label
+                ><br />
+
+                <input type="radio" id="yes" name="communication" value="Yes" />
+                <label for="yes">Yes</label><br />
+
+                <input type="radio" id="no" name="communication" value="No" />
+                <label for="no">No</label><br />
+
+                <input
+                  type="radio"
+                  id="notsure"
+                  name="communication"
+                  value="Not Sure"
+                />
+                <label for="notsure">Not Sure</label><br />
+              </div>
+            </div>
+
+            <div class="question-container">
+              <p class="main-question">5. Staff and Service:</p>
+
+              <!-- <div class="slider-container">
+                <label class="question" for="slider3"
+                  >a.Rate the cleanliness and comfort of the train:</label
+                >
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  value="5"
+                  class="slider"
+                  id="slider3"
+                />
+                <span id="slider3Value">5</span>
+              </div> -->
+
+              <div>
+                <label class="question" for="serviceissues"
+                  >a.Report any customer service issues faced:</label
+                ><br />
+                <textarea
+                  id="serviceissues"
+                  name="serviceissues"
+                  rows="4"
+                  cols="50"
+                ></textarea
+                ><br /><br />
+              </div>
+            </div>
+
+            <div class="question-container">
+              <p class="main-question">6. Suggestions for Improvement:</p>
+              <div>
+                <label class="question" for="userexperience"
+                  >a.How can we improve the booking process and user
+                  experience?</label
+                ><br />
+                <textarea
+                  id="userexperience"
+                  name="userexperience"
+                  rows="4"
+                  cols="50"
+                ></textarea
+                ><br /><br />
+              </div>
+
+              <div>
+                <label class="question" for="suggestion"
+                  >b.What additional services or amenities do you
+                  suggest?</label
+                ><br />
+                <textarea
+                  id="suggestion"
+                  name="suggestion"
+                  rows="4"
+                  cols="50"
+                ></textarea
+                ><br /><br />
+              </div>
+            </div>
+          </fieldset>
+          <br /><br />
+          <input class="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
