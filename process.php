@@ -1,10 +1,10 @@
-<?
+<?php 
 $fname=$_POST["fname"];
 $email=$_POST["email"];
 $mobile=$_POST["mobile"];
 $pnr_no=$_POST["pnr_no"];
-$classes=$_POST["classes"];
-$rating1=$_POST["rating1"];
+$classes=$_POST["classes"]; 
+$journey_exp=$_POST["journey_exp"];
 $enjoyment=$_POST["enjoyment"];
 $bookingEase=$_POST["bookingEase"];
 $bookingprob=$_POST["bookingprob"];
@@ -31,8 +31,8 @@ $conn = mysqli_connect( hostname: $host,
             //     die("connection Error:". mysqli_connect_error());
             //    }
             //    echo"connection successfull";
-$sql ="INSERT INTO info_db ( fname, email, mobile, pnr_no, classes, rating1, enjoyment, bookingEase, bookingprob,rating2, restroom, punctuality, communication, rating3,serviceissues, userexperience, suggestion)
-                      VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql ="INSERT INTO info_db ( fname, email, mobile, pnr_no, classes,journey_exp, enjoyment, bookingEase, bookingprob, rating2,restroom, punctuality, communication, rating3 ,serviceissues, userexperience, suggestion)
+                      VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)";
                       
 $stmt = mysqli_stmt_init($conn);
 
@@ -45,7 +45,7 @@ if (! mysqli_stmt_prepare($stmt, $sql)){
                            $mobile,
                            $pnr_no,
                            $classes,
-                           $rating1,
+                           $journey_exp,
                            $enjoyment,
                            $bookingEase,
                            $bookingprob,
@@ -53,7 +53,7 @@ if (! mysqli_stmt_prepare($stmt, $sql)){
                            $restroom,
                            $punctuality,
                            $communication,
-                           $rating3,    
+                           $rating3,
                            $serviceissues,
                            $userexperience,
                            $suggestion);
