@@ -62,10 +62,19 @@ h1 {
 }
 
 .fieldset1 {
-  background: whitesmoke;
+  background: ghostwhite;
   margin: 20px;
   height: auto;
   width: auto;
+  border-radius: 5px;
+}
+
+.fieldset2 {
+    background: ghostwhite;
+  margin: 20px;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
 }
 
 .info {
@@ -119,27 +128,15 @@ textarea:hover {
   border-color: #666;
   box-shadow: 0 2px 4px #0000001a;
   margin-right: 10px;
+  cursor: pointer;
 }
 
-.fieldset2 {
-  background: whitesmoke;
-  margin: 20px;
-  height: auto;
-  width: auto;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding-left: 10px;
-}
-.rating {
+/* .rating {
   margin-top: 40px;
   border: none;
   float: left;
-}
+  cursor: pointer;
+} */
 
 .question-header {
   padding: 100px 100px;
@@ -163,15 +160,16 @@ h6 {
 }
 
 .submit {
-  background-color: #4caf50;
+  background-color: #093869;
   color: white;
   padding: 15px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
+  margin-left: 18px;
 }
 
 .submit:hover {
-  background-color: #45a049;
+  background-color: #093870;
 }
